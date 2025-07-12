@@ -61,23 +61,6 @@ export default function Home() {
 
   return (
     <div className="bg-gray-100 min-h-screen font-sans">
-      {/* Navigation */}
-      <nav className="bg-primary text-white p-4 sticky top-0 z-10 font-inter">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Md Minhazur Rahman</h1>
-          <div className="space-x-4">
-            <Link href="#about" className="hover:text-blue-300">About</Link>
-            <Link href="#education" className="hover:text-blue-300">Education</Link>
-            <Link href="#research" className="hover:text-blue-300">Research</Link>
-            <Link href="#achievements" className="hover:text-blue-300">Achievements</Link>
-            <Link href="#publications" className="hover:text-blue-300">Publications</Link>
-            <Link href="#experience" className="hover:text-blue-300">Experience</Link>
-            <Link href="#skills" className="hover:text-blue-300">Skills</Link>
-            <Link href="#contact" className="hover:text-blue-300">Contact</Link>
-            <Link href="#references" className="hover:text-blue-300">References</Link>
-          </div>
-        </div>
-      </nav>
 
       {/* About Section */}
       <section id="about" className="py-12 bg-white">
