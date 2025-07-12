@@ -162,6 +162,7 @@ export default function Home() {
                   className="w-full p-2 border rounded"
                 />
               </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredPublications.length > 0 ? (
                 filteredPublications.map(pub => (
