@@ -67,6 +67,7 @@ export default function Home() {
       <section id="about" className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
+          <img src="/profile.jpg" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-4" />
           <p className="text-lg max-w-2xl mx-auto text-center">
             I am Md Minhazur Rahman, a graduate student in Electronics Engineering at Kookmin University, Seoul, South Korea. My research focuses on Optical Wireless Communication, Machine Learning, and Smart Energy Management.
           </p>
@@ -134,18 +135,18 @@ export default function Home() {
       </section>
 
       {/* Publications Section */}
-      <section id="publications" className="py-12 bg-white">
+      <section id="publications" className="py-12 bg-secondary text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-center">Publications</h2>
           <div className="max-w-3xl mx-auto">
             <div className="mb-4 flex flex-col sm:flex-row gap-4">
               <div>
-                <label htmlFor="yearFilter" className="block">Filter by Year:</label>
+                <label htmlFor="yearFilter" className="block text-white">Filter by Year:</label>
                 <select
                   id="yearFilter"
                   value={filterYear}
                   onChange={(e) => setFilterYear(e.target.value)}
-                  className="p-2 border rounded"
+                  className="p-2 border rounded bg-white text-black"
                 >
                   <option value="all">All Years</option>
                   <option value="2024">2024</option>
@@ -153,14 +154,14 @@ export default function Home() {
                 </select>
               </div>
               <div>
-                <label htmlFor="searchKeyword" className="block">Search by Keyword:</label>
+                <label htmlFor="searchKeyword" className="block text-white">Search by Keyword:</label>
                 <input
                   id="searchKeyword"
                   type="text"
                   value={searchKeyword}
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   placeholder="Search title, authors, or journal"
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 border rounded bg-white text-black"
                 />
               </div>
             </div>
@@ -214,7 +215,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-center">Skills</h2>
           <div className="max-w-3xl mx-auto">
-            <p><strong>Project & Leadership:</strong> Led a student research team for an OCC system.</p>
+            <p><strong>Project & Leadership:</strong> Led a group of students research team for a Military drone OCC project.</p>
             <p><strong>Programming Languages:</strong> Python, C, C++</p>
             <p><strong>Machine Learning Frameworks:</strong> Tensorflow, Keras, Scikit-learn, PyTorch</p>
             <p><strong>Tools:</strong> Jupyter Notebook, VS Code, Google Colab, GitHub</p>
@@ -269,27 +270,6 @@ export default function Home() {
             </button>
             {submitStatus && <p className="text-center">{submitStatus}</p>}
           </form>
-        </div>
-      </section>
-
-      {/* References Section */}
-      <section id="references" className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">References</h2>
-          <div className="space-y-6 max-w-3xl mx-auto">
-            <div>
-              <h3 className="text-xl font-semibold">Prof. Yeong Min Jang</h3>
-              <p>Professor, Department of Electronics Engineering, Kookmin University, South Korea</p>
-              <p>Email: yjang@kookmin.ac.kr</p>
-              <p>Relationship: Graduate thesis supervisor</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Prof. Mostafa Zaman Chowdhury</h3>
-              <p>Professor, Department of EEE, Khulna University of Engineering & Technology, Bangladesh</p>
-              <p>Email: mzceee@gmail.com</p>
-              <p>Relationship: Undergraduate thesis supervisor</p>
-            </div>
-          </div>
         </div>
       </section>
 
