@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen font-sans">
       {/* Navigation */}
-      <nav className="bg-blue-900 text-white p-4 sticky top-0 z-10">
+      <nav className="bg-primary text-white p-4 sticky top-0 z-10 font-inter">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">Md Minhazur Rahman</h1>
           <div className="space-x-4">
@@ -90,7 +90,7 @@ export default function Home() {
             <a href="mailto:minhaz.eee.97@gmail.com" className="text-blue-600 hover:underline">Email</a>
             <a href="https://scholar.google.com/citations?user=LnAi7u4AAAAJ&hl=en" target="_blank" rel="noopener" className="text-blue-600 hover:underline">Google Scholar</a>
             <a href="https://www.researchgate.net/profile/Md-Minhazur-Rahman-5?ev=hdr_xprf" target="_blank" rel="noopener" className="text-blue-600 hover:underline">ResearchGate</a>
-            <a href="www.linkedin.com/in/md-minhazur-rahman-468b60177" target="_blank" rel="noopener" className="text-blue-600 hover:underline">LinkedIn</a>
+            <a href="www.linkedin.com/in/md-minhazur-rahman-468b60177/" target="_blank" rel="noopener" className="text-blue-600 hover:underline">LinkedIn</a>
           </div>
         </div>
       </section>
