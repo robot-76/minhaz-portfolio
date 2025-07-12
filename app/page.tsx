@@ -162,16 +162,20 @@ export default function Home() {
                   className="w-full p-2 border rounded"
                 />
               </div>
-            </div>
-            <ul className="space-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredPublications.length > 0 ? (
                 filteredPublications.map(pub => (
-                  <li key={pub.id}>{pub.authors}, "{pub.title}," <i>{pub.journal}</i>, {pub.year}.</li>
+                  <div key={pub.id} className="p-4 bg-gray-100 rounded-lg shadow-lg">
+                    <p>{pub.authors}, "{pub.title}," <i>{pub.journal}</i>, {pub.year}.</p>
+                    {pub.url && (
+                      <a href={pub.url} target="_blank" className="text-blue-600 hover:underline">Read More</a>
+                    )}
+                  </div>
                 ))
               ) : (
-                <li>No publications found.</li>
+                <p className="text-center">No publications found.</p>
               )}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
