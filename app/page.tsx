@@ -8,6 +8,7 @@ interface Publication {
   authors: string;
   journal: string;
   year: string;
+  url: string:
 }
 
 export default function Home() {
