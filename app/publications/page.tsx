@@ -14,12 +14,19 @@ export default function Publications() {
   const [publications, setPublications] = useState<Publication[]>([]);
   const [filterYear, setFilterYear] = useState('all');
   const [searchKeyword, setSearchKeyword] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/publications`)
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
       .then(data => setPublications(data))
-      .catch(err => console.error('Error fetching publications:', err));
+      .catch(err => {
+        console.error('Error fetching publications:', err);
+        setError('Failed to load publications. Please try again later.');
+      });
   }, []);
 
   const filteredPublications = publications.filter(pub => {
@@ -61,20 +68,22 @@ export default function Publications() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredPublications.length > 0 ? (
-            filteredPublications.map(pub => (
+        {error ? (
+          <p className="text-center text-red-600">{error}</p>
+        ) : filteredPublications.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredPublications.map(pub => (
               <div key={pub.id} className="p-4 bg-gray-100 rounded-lg shadow-lg">
                 <p>{pub.authors}, "{pub.title}," <i>{pub.journal}</i>, {pub.year}.</p>
                 {pub.url && (
                   <a href={pub.url} target="_blank" className="text-blue-600 hover:underline">Read More</a>
                 )}
               </div>
-            ))
-          ) : (
-            <p className="text-center">No publications found.</p>
-          )}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-center">No publications found.</p>
+        )}
       </div>
     </div>
   );
