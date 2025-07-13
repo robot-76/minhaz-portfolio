@@ -19,6 +19,7 @@ export default function RootLayout({
         <aside className="w-64 bg-blue-900 text-white p-4 fixed h-full">
           <h1 className="text-2xl font-bold mb-4">Md Minhazur Rahman</h1>
           <nav className="space-y-2">
+            <Link href="/" className="block hover:text-blue-300">Home</Link>
             <Link href="/about" className="block hover:text-blue-300">About</Link>
             <Link href="/education" className="block hover:text-blue-300">Education</Link>
             <Link href="/research" className="block hover:text-blue-300">Research</Link>
