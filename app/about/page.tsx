@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
       <h2 className="text-3xl font-bold mb-6">About Me</h2>
-      <img src="/profile.jpg" alt="Profile" className="w-8 h-28 rounded-full mb-4" />
+      <img src="/profile.jpg" alt="Profile" className="w-8 h-8 rounded-full mb-4" />
       <p className="text-lg max-w-2xl text-center">
         I am Md Minhazur Rahman, a graduate student in Electronics Engineering at Kookmin University, Seoul, South Korea. My research focuses on Optical Wireless Communication, Machine Learning, and Smart Energy Management.
       </p>
